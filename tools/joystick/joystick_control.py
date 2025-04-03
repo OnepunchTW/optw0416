@@ -3,7 +3,10 @@ import os
 import argparse
 import threading
 import numpy as np
-import pygame as pg
+try:
+  import pygame as pg
+except ImportError:
+  print("pygame is not installed. Please install it with 'uv pip install pygame'")
 
 from cereal import messaging
 from openpilot.common.params import Params
